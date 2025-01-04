@@ -4,6 +4,7 @@
 #include <Geode/ui/BasedButtonSprite.hpp>
 #include <Geode/utils/NodeIDs.hpp>
 
+#include "LiteUtils.hpp"
 #include "IDCheck.hpp"
 
 using namespace geode::prelude;
@@ -280,12 +281,14 @@ struct ProfilePageIDs : Modify<ProfilePageIDs, ProfilePage> {
             static_cast<CCNode*>(m_buttons->objectAtIndex(idx++))->setID("twitch-button");
             socialMediaCount++;
         }
+        if (!geode::lite::isLite()) {
         if(m_score->m_commentHistoryStatus != 2 && (m_score->m_commentHistoryStatus != 1 || m_score->m_friendReqStatus == 1)
             || m_ownProfile
             || GameManager::sharedState()->m_hasRP == 2
         ) {
             static_cast<CCNode*>(m_buttons->objectAtIndex(idx++))->setID("comment-history-button");
         }
+    }
         if(socialMediaCount > 0) {
             static_cast<CCNode*>(m_buttons->objectAtIndex(idx++))->setID("my-stuff-hint");
         }
