@@ -4,6 +4,7 @@
 #include <Geode/modify/CreatorLayer.hpp>
 #include <Geode/utils/cocos.hpp>
 #include <Geode/utils/NodeIDs.hpp>
+#include "LiteUtils.hpp"
 
 using namespace geode::prelude;
 using namespace geode::node_ids;
@@ -63,10 +64,12 @@ $register_ids(CreatorLayer) {
             menu->updateLayout();
         }
 
+        auto name11 = geode::lite::isLite() ? "bonus-button" : "lists-button";
+
         // row order is inverted because of layout
         reorderButtons(
             setIDSafe(menu, 10, "featured-button"),
-            setIDSafe(menu, 11, "lists-button"),
+            setIDSafe(menu, 11, name11),
             setIDSafe(menu, 12, "paths-button"),
             setIDSafe(menu, 13, "map-packs-button"),
             setIDSafe(menu, 14, "search-button"),
