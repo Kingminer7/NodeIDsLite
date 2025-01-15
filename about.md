@@ -1,4 +1,6 @@
-# Node IDs
+# Node IDsLite
+
+This is a modification of the original Node IDs mod to work on GD Lite.
 
 Adds node IDs to layers for other mods to base their UI on, for preserving mod compatibility. See the [Github repository](https://github.com/geode-sdk/NodeIDs) for contributing.
 

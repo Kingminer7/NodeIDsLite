@@ -8,7 +8,7 @@
 	},
 	"version": "v1.19.0", 
 	"id": "geode.node-ids",
-	"name": "Node IDs",
+	"name": "Node IDs Lite",
 	"developer": "Geode Team",
 	"description": "Standard node IDs to be used by other mods.",
 	"links": {
